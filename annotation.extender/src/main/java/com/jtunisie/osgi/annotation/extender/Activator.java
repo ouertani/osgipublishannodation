@@ -6,7 +6,7 @@
 package com.jtunisie.osgi.annotation.extender;
 
 import com.jtunisie.osgi.annotation.Prop;
-import com.jtunisie.osgi.annotation.Publish;
+import com.jtunisie.osgi.annotation.RegisterService;
 import com.jtunisie.osgi.annotation.NamedInterface;
 import java.net.URL;
 import java.util.Enumeration;
@@ -74,7 +74,7 @@ public class Activator implements BundleActivator, BundleListener {
             Class<?> loaded = b.loadClass(clazz);
 
             System.out.println("Loaded class [" + loaded + "]");
-            boolean annotationPresent = loaded.isAnnotationPresent(Publish.class);
+            boolean annotationPresent = loaded.isAnnotationPresent(RegisterService.class);
             System.out.println("" + annotationPresent);
             if (annotationPresent) {
                 publishService(loaded, b);
@@ -94,7 +94,7 @@ public class Activator implements BundleActivator, BundleListener {
     }
 
     private void publishService(Class<?> loaded, Bundle bundle) throws IllegalAccessException, InstantiationException {
-        Publish annotation = loaded.getAnnotation(Publish.class);
+        RegisterService annotation = loaded.getAnnotation(RegisterService.class);
         String id = annotation.id();
         NamedInterface[] interfaces = annotation.NamedInterfaces();
         Prop[] with = annotation.Props();
