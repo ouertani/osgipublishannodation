@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Export-Package: com.jtunisie.osgi.annotation.client
+Private-Package: com.jtunisie.osgi.annotation.client.impl
+Built-By: sst
+Tool: Bnd-0.0.311
+Bundle-Name: annotation.client
+Created-By: Apache Maven Bundle Plugin
+Bundle-Version: 1.0.0.SNAPSHOT
+Build-Jdk: 1.6.0_16
+Bnd-LastModified: 1252515810040
+Bundle-ManifestVersion: 2
+Import-Package: com.jtunisie.osgi.annotation,com.jtunisie.osgi.annotat
+ ion.client
+Bundle-SymbolicName: annotation.client-1.0-SNAPSHOT
+

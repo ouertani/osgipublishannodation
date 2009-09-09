@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.jtunisie.osgi</groupId>
+  <artifactId>annotation.client</artifactId>
+  <packaging>bundle</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>annotation.client</name>
+  <url>http://jroller.com/ouertani</url>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+             <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Private-Package>com.jtunisie.osgi.annotation.client.impl</Private-Package>
+                        <Export-Package>com.jtunisie.osgi.annotation.client</Export-Package>
+                        <Bundle-SymbolicName>${pom.name}-${pom.version}</Bundle-SymbolicName>
+                       <!-- <Bundle-Activator>com.jtunisie.osgi.annotation.extender.Activator</Bundle-Activator>-->
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+       <dependency>
+            <groupId>com.jtunisie.osgi</groupId>
+            <artifactId>annotation</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+  </dependencies>
+</project>
+
