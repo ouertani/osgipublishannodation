@@ -7,7 +7,7 @@ Bundle-Name: annotation
 Created-By: Apache Maven Bundle Plugin
 Bundle-Version: 0.0.1.SNAPSHOT
 Build-Jdk: 1.6.0_16
-Bnd-LastModified: 1252515802896
+Bnd-LastModified: 1252536093383
 Bundle-ManifestVersion: 2
 Import-Package: com.jtunisie.osgi.annotation
 Bundle-SymbolicName: annotation-0.0.1-SNAPSHOT
