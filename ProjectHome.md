@@ -1,0 +1,1 @@
+publish service using annotation inside osgi
